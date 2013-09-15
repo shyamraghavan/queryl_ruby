@@ -7,9 +7,8 @@
 		<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
+  
 	<body>
-		<script src="http://code.jquery.com/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 		<div class="container-fluid">
 			<div class="span12">
 				</br>
@@ -23,10 +22,13 @@
 				<div id="signup-box">
           <%= form_for User.new do |f| %>
               
-              <%= f.text_field :name, placeholder: "Name" %>
-              <%= f.text_field :email, placeholder: "Email" %>
-              <%= f.password_field :password, placeholder: "Password" %>
-              <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+              <%= f.text_field :name, placeholder: "Name" %><br>
+              <%= f.text_field :email, placeholder: "Email" %><br>
+              <%= f.password_field :password, placeholder: "Password" %><br>
+              <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br>
+              <%= f.text_field :twitter, placeholder: "Twitter Handle (Optional)" %><br>
+              <%= f.text_field :facebook, placeholder: "Facebook ID (Optional)" %><br>
+              <%= f.text_field :google, placeholder: "Google ID (Optional)" %><br>
               <%= f.submit "Signup", :class => "btn btn-custom" %>
           <% end %>
           <a href="/" style="font-size: small;">Already registered? Login</a>

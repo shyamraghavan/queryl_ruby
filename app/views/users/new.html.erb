@@ -1,5 +1,5 @@
 <ul>
-    <% @users.each do |user| %>
+  <% User.find(2) do |user| %>
   <li><%= link_to user.name, 
     :action => 'show', :email => user.email  %></li>
   <% end %>

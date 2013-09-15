@@ -1,12 +1,22 @@
 class SessionsController < ApplicationController
+  
+  userA = User.new;
+  
+  def get_user_A
+    return userA
+  end
+  
   def new
   end
 
   def create
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
-      session[:userid] = user.id
+      session[:user_id] = user.id
       flash[:error] = "Account Created."
+      
+      userA = user
+      
       redirect_to "/session_index"
     else
         flash[:error] = "Wrong Username or Password."

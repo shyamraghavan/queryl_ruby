@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130914211528) do
+ActiveRecord::Schema.define(version: 20130915090454) do
 
   create_table "user_ids", force: true do |t|
     t.string   "password_digest"
@@ -34,6 +34,11 @@ ActiveRecord::Schema.define(version: 20130914211528) do
     t.string   "zip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "google"
+    t.string   "provider"
+    t.string   "uid"
   end
 
 end

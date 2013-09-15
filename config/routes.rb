@@ -7,14 +7,20 @@ Queryl::Application.routes.draw do
   get "new", to: 'users#new'  
   get "show", to: 'users#show'
   get "user_index", to: 'users#index'
+  get "user_add_accounts", to: 'users#addaccounts'
   
   get "home", to: 'sessions#index'
   get "session_begin", to: 'sessions#create'
   get "session_index", to: 'sessions#index'
   get "session_end", to: 'sessions#destroy'
+  
+  get "search", to: 'users#search'
+  post "search", to: 'users#new'
 
   resources :users
   resources :sessions
+  
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   
   root 'users#signin'
 

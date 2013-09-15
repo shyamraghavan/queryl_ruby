@@ -9,6 +9,20 @@
 	color:#5d1889;
 	display:block;
 }
+#edit-info-box{
+	text-align: right;
+	margin-top:30px;
+	display:block;
+	color: #5d1889;
+	font-weight:bold;
+}
+#edit-info-box a{
+	color:#5d1889;
+	display:block;
+}
+#twitter-follow-button {
+  padding-left: 300px;
+}
 #search-box .btn-cust {
 	margin-left: -5px;
 	margin-top: -10px;
@@ -33,16 +47,15 @@
 	text-align: center;
 	margin: auto;
 }
-
 #vert-center-signup {
-	height: 250px;
-	position:absolute;
-	top:0;
-	bottom:0;
-	left: 0;
-	right: 0;
-	text-align: center;
-	margin: auto;
+  height: 380px;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
 }
 
 #login-box {
@@ -66,27 +79,42 @@
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
   -webkit-font-smoothing: antialiased;
   margin-left: 0px;
-  width: 107%;
+  width: 100%;
 }
 #icon-list {
 	margin-bottom:15px;
 }
-
-#signup-box {
-	width:200px;
-	text-align: center;
+#info-text {
+	<font size="2">;
+}
+#vert-left{
+	height: 150px;
+	position:relative;
+	top:0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	padding-left: 15%;
+	padding-top: 10%;
+	text-align: left;
 	margin: auto;
 }
-#search-box {
-  width: 200px;
-  text-align: center;
-  margin: auto;
+#dialog {
+	background-color:#FFFFFF;
+	padding-top:3px;
+	box-shadow: 0px 0px 8px 1px #5d1889;
+	border-radius: 5px;
 }
-
-#search-box .btn-custom {
-  width: 40%;
-  margin-left: 18px;
+.ui-dialog-titlebar-close {
+  visibility: hidden;
 }
-#create-account-text {
-	font-size: x-large;
+.ui-dialog-titlebar {
+    float: right;
+    border: 0;
+    padding: 0;
+    visibility: hidden;
+}
+#divLoading1 .ui-dialog-titlebar
+{
+    display:none;
 }

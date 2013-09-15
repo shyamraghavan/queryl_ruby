@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
  
     @user.save
-    redirect_to @user
+    redirect_to '/user_index'
   end
   
   def show

@@ -77,6 +77,16 @@
 	text-align: center;
 	margin: auto;
 }
+#search-box {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
+
+#search-box .btn-custom {
+  width: 40%;
+  margin-left: 18px;
+}
 #create-account-text {
 	font-size: x-large;
 }

@@ -19,6 +19,7 @@
 		<div class="container-fluid">
 			<div id="vert-center-signup">
 				<h1 id = "create-account-text"> Create a Queryl Account </h1>
+        <p id = "flash-error"> <%= flash[:error] %> </p>
 				<div id="signup-box">
           <%= form_for User.new do |f| %>
               

@@ -6,11 +6,15 @@ Queryl::Application.routes.draw do
   get "signup", to: 'users#signup'
   get "new", to: 'users#new'  
   get "show", to: 'users#show'
-  get "home", to: 'users#index'
+  get "user_index", to: 'users#index'
   
-  get "session/create", to: "sessions#create"
+  get "home", to: 'sessions#index'
+  get "session_begin", to: 'sessions#create'
+  get "session_index", to: 'sessions#index'
+  get "session_end", to: 'sessions#destroy'
 
   resources :users
+  resources :sessions
   
   root 'users#signin'
 

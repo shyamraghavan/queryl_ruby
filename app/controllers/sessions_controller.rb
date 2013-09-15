@@ -5,11 +5,12 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
-        session[:userid] = user.id
-        redirect_to "/show", notice: "Logged in!"
+      session[:userid] = user.id
+      flash[:error] = "Account Created."
+      redirect_to "/session_index"
     else
         flash[:error] = "Wrong Username or Password."
-        redirect_to "/signup"
+        redirect_to "/"
     end
   end
 
@@ -17,4 +18,8 @@ class SessionsController < ApplicationController
     session[:userid] = nil
     redirect_to root_url, notice: "Logged out."
   end
+  
+  def index
+  end
+ 
 end

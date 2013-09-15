@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Queryl | Search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<div class="container-fluid">
+			<div class="span12 row-fluid">
+			<div class="span8">
+				</br>
+        <a href="/home"><img src="img/logo.png"></a>
+			</div>
+      <div id="menu-box" class="span2" align="left"><a href="#">Manage Accounts</a></div>
+      <div id="menu-box" class="span2" align="left"><a href="/session_end">Logout</a></div>
+		</div>
+		</div>
+		<div class="container-fluid">
+			<div id="vert-center">
+        <p id = "flash-error"> <%= flash[:error] %> </p>
+				<div id="icon-list">
+					<img src="img/facebook.png">
+					<img src="img/twitter.png">
+					<img src="img/google+.png">
+				</div>
+				<div id="search-box">
+					<input type="text" placeholder="Search for someone, anyone" name="query">
+					<br><button class="btn btn-custom">Search</button>
+          <button class="btn btn-custom">Nearby</button>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

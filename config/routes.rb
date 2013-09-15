@@ -6,6 +6,9 @@ Queryl::Application.routes.draw do
   get "signup", to: 'users#signup'
   get "new", to: 'users#new'  
   get "show", to: 'users#show'
+  get "home", to: 'users#index'
+  
+  get "session/create", to: "sessions#create"
 
   resources :users
   

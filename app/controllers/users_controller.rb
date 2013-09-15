@@ -5,19 +5,18 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(params[:name, :email, :password, :password_confirmation])
+    @user = User.new(params[:user])
  
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to "/show", notice: "Thank you for signing up for Queryl!"
-    else
-      render 'new'
-    end
+    @user.save
+    redirect_to @user
   end
   
   def show
     @user = User.find(params[:id])
   end
-
+  
+  def index
+    redirect_to '/'
+  end
   
 end

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Queryl | Sign Up</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<div class="container-fluid">
+			<div class="span12">
+				</br>
+      <a href="/"><img src="img/logo.png"></a>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div id="vert-center-signup">
+				<h1 id = "create-account-text"> Create a Queryl Account </h1>
+				<div id="signup-box">
+          <%= form_for User.new do |f| %>
+              
+              <%= f.text_field :name, placeholder: "Name" %>
+              <%= f.text_field :email, placeholder: "Email" %>
+              <%= f.password_field :password, placeholder: "Password" %>
+              <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+              <%= f.submit "Signup", :type => :button, :class => "btn btn-custom" %>
+          <% end %>
+          <a href="/" style="font-size: small;">Already registered? Login</a>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

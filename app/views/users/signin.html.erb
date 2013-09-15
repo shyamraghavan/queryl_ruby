@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Queryl | Sign In</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<div class="container-fluid">
+			<div class="span12">
+				</br>
+      <a href="/"><img src="img/logo.png"></a>
+			</div>
+
+		</div>
+		<div class="container-fluid">
+			<div id="vert-center">
+				<div id="icon-list">
+					<img src="img/facebook.png">
+					<img src="img/twitter.png">
+					<img src="img/google+.png">
+				</div>
+        <div id="login-box">
+          <%= form_tag sessions_create_path do %>
+          <%= text_field_tag :email, nil, placeholder: "Email" %>
+					<%= password_field_tag :password, nil,  placeholder: "Password" %>
+          <%= submit_tag "Submit", class: "btn btn-custom" %>
+          <br><br><a href="signup" style="font-size: small;">Create an Account</a>
+				  <% end %>
+        </div>
+			</div>
+		</div>
+		
+	</body>
+</html>
